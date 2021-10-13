@@ -1,0 +1,43 @@
+//To use media query in boostrap sass
+//use media-breakpoint-down(sm)/up(sm): this target the min/max screen width device
+
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.btn-rounded{
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+
+    position: relative;
+    padding: 0.5375rem 2.575rem 0.5375rem 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
+    span{
+        position: absolute;
+        background-color: $primary;
+        width: 1.75rem;
+        height: 1.75rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+
+        i{
+            color: $white;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    &:hover{
+        @include gradient;
+        color: $white;
+
+        span{
+            background-color: rgba($black, 0.6);
+        }
+    }
+}

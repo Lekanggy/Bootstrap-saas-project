@@ -1,0 +1,16 @@
+//Import the custom scss so as to be used a name spaces of *
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu{
+    @include gradient;
+
+    li{
+        padding: 0 0.7rem;
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+}
